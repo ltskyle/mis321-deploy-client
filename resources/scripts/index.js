@@ -1,4 +1,5 @@
 const url = 'https://localhost:7095/api/Song'
+const apiURL = 'https://mis321-deploy-api.herokuapp.com/api/Song'
 let app = document.getElementById('app')
 let data
 let user
@@ -143,7 +144,7 @@ const makeTable = (songs) => {
 }
 
 async function favorite(ID) {
-    const newUrl = `https://localhost:7095/api/Song/${ID}`
+    const newUrl = `https://mis321-deploy-api.herokuapp.com/api/Song/${ID}`
     await fetch(url)
         .then(function (response) {
             return response.json()
@@ -184,7 +185,7 @@ async function favorite(ID) {
 }
 
 async function deleteSong(ID) {
-    const newUrl = `https://localhost:7095/api/Song/${ID}`
+    const newUrl = `https://mis321-deploy-api.herokuapp.com/api/Song/${ID}`
     await fetch(url)
         .then(function (response) {
             return response.json()
@@ -216,7 +217,7 @@ async function editSong(ID) {
     let newTitle
     let newArtist
     let editForm = document.getElementById('editSong')
-    const newUrl = `https://localhost:7095/api/Song/${ID}`
+    const newUrl = `https://mis321-deploy-api.herokuapp.com/api/Song/${ID}`
     await fetch(url)
         .then(function (response) {
             return response.json()
